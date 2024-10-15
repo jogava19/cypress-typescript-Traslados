@@ -1,4 +1,4 @@
-import { login, logout } from "../../../support/utilsPROD";
+import { login } from "../../../support/utilsPROD";
 const contraseña = '1234La';
 const usuario = 'coplussspv';
 const contraseñaprest = '1234lA';

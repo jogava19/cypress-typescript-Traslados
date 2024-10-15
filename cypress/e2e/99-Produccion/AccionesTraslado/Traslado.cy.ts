@@ -1,11 +1,11 @@
-import { login, logout } from "../../../support/utilsPROD";
+import { login } from "../../../support/utilsPROD";
 const contraseña = '1234La';
 const usuario = 'coplussspv';
 const idtraslado = 1179300;
 
 
 describe('AccionesTraslados', () => {
-  
+  /*
     it ('CamposYDesvios', () => {
       cy.viewport(1920, 1080);
       login(usuario,contraseña);
@@ -43,7 +43,7 @@ describe('AccionesTraslados', () => {
 
 
     it ('VerDetalles', () => {
-      cy.viewport(1920, 1080);
+      //cy.viewport(1920, 1080);
       login(usuario,contraseña);
       cy.wait(1500);
       cy.get(':nth-child(2) > .header').click();
@@ -52,8 +52,73 @@ describe('AccionesTraslados', () => {
       cy.get('button.btn.btn-primary.btn-sm.iconoRueda').click();
       cy.get(':nth-child(1) > .dropdown-item').click();
       cy.contains(':nth-child(1) > :nth-child(1) > .content > .card > .card2', (`${idtraslado}`)).should('be.visible');
+      cy.contains(':nth-child(1) > :nth-child(1) > .content > .card > .card2', (`${idtraslado}`)).should('be.visible');
+      cy.contains('.modal-header', (`${idtraslado}`)).should('be.visible');
+      cy.contains('.text-truncate', 'esto se modifica por Automatio').should('be.visible');
+    });
 
+    it ('AgregarNotaPublicaYPrivada', () => {
+      //cy.viewport(1920, 1080);
+      login(usuario,contraseña);
+      cy.wait(1500);
+      cy.get(':nth-child(2) > .header').click();
+      cy.get('[href="#/gestion/traslados"]').click();
+      cy.get(':nth-child(1) > .input-group > .form-control').type(`${idtraslado}`).wait(2000);
+      cy.get('button.btn.btn-primary.btn-sm.iconoRueda').click();
+      cy.get(':nth-child(1) > .dropdown-item').click();
+      cy.get('.float-left > .btn').click();
+      cy.get('.col > .form-control > .ng-select-container > .ng-arrow-wrapper').click();
+      cy.get('span.ng-option-label').contains('Pública').click();
+      cy.get('.col-12 > .form-control').clear().type('Nota Pub x Cypess');
+      cy.get('.modal-footer > button.btn').click();
+
+      cy.get('.float-left > .btn').click();//Nota Privada
+      cy.get('.col > .form-control > .ng-select-container > .ng-arrow-wrapper').click();
+      cy.get('span.ng-option-label').contains('Privada').click();
+      cy.get('.col-12 > .form-control').clear().type('Nota Priv x Cypess');
+      cy.get('.modal-footer > button.btn').click();
+
+      cy.get(':nth-child(1) > :nth-child(4) > .btn').click();
+      cy.get(':nth-child(3) > :nth-child(4) > .btn').click();
+     });
+
+     it ('Agregar Reclamo', () => {
+      //cy.viewport(1920, 1080);
+      login(usuario,contraseña);
+      cy.wait(1500);
+      cy.get(':nth-child(2) > .header').click();
+      cy.get('[href="#/gestion/traslados"]').click();
+      cy.get(':nth-child(1) > .input-group > .form-control').type(`${idtraslado}`).wait(2000);
+      cy.get('button.btn.btn-primary.btn-sm.iconoRueda').click();
+      cy.get(':nth-child(1) > .dropdown-item').click();
+      cy.get('#tab-traslados-reclamos-link').click();
+      cy.get('#headingOne > .btn').click();
+      cy.get(':nth-child(1) > :nth-child(1) > .form-control > .ng-select-container > .ng-arrow-wrapper').click();
+      cy.get('.ng-option-label').click();
+      cy.get('.mb-3 > :nth-child(1) > .form-control > .ng-select-container > .ng-arrow-wrapper').click();
+      cy.contains('span', 'El móvil no se presentó en origen').click();
+      cy.get('.col-12 > .form-control').type('Reclamo x Cypress');
+      cy.get('.modal-footer > button.btn').click();
+      cy.get(':nth-child(6) > .btn').click().wait(1500);
+      });
+*/
+      it ('Agregar Reclamo', () => {
+        //cy.viewport(1920, 1080);
+        login(usuario,contraseña);
+        cy.wait(1500);
+        cy.get(':nth-child(2) > .header').click();
+        cy.get('[href="#/gestion/traslados"]').click();
+        cy.get(':nth-child(1) > .input-group > .form-control').type(`${idtraslado}`).wait(2000);
+        cy.get('button.btn.btn-primary.btn-sm.iconoRueda').click().wait(1000);
+        cy.get(':nth-child(4) > .dropdown-item').click().wait(1000);
+        cy.get('.modal-footer > button.btn').click().wait(1000);
+        cy.get('button.btn.btn-primary.btn-sm.iconoRueda').click().wait(1000);
+        cy.get(':nth-child(4) > .dropdown-item').click().wait(1000);
+        cy.get('.modal-footer > button.btn').click().wait(1000).wait(1000);
+        cy.get('button.btn.btn-primary.btn-sm.iconoRueda').click().wait(1000);
+        cy.get(':nth-child(5) > .dropdown-item').click().wait(1000);
+        cy.get('.modal-footer > button.btn').click().wait(1000);
 
 
     });
-     }); 
+  });
