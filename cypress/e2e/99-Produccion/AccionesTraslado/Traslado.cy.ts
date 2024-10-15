@@ -5,7 +5,7 @@ const idtraslado = 1179300;
 
 
 describe('AccionesTraslados', () => {
-  /*
+
     it ('CamposYDesvios', () => {
       cy.viewport(1920, 1080);
       login(usuario,contraseña);
@@ -82,7 +82,7 @@ describe('AccionesTraslados', () => {
       cy.get(':nth-child(3) > :nth-child(4) > .btn').click();
      });
 
-     it ('Agregar Reclamo', () => {
+     it ('AgregarReclamo', () => {
       //cy.viewport(1920, 1080);
       login(usuario,contraseña);
       cy.wait(1500);
@@ -101,8 +101,8 @@ describe('AccionesTraslados', () => {
       cy.get('.modal-footer > button.btn').click();
       cy.get(':nth-child(6) > .btn').click().wait(1500);
       });
-*/
-      it ('Agregar Reclamo', () => {
+
+      it ('AgregarReducirHsEspera', () => {
         //cy.viewport(1920, 1080);
         login(usuario,contraseña);
         cy.wait(1500);
@@ -118,7 +118,5 @@ describe('AccionesTraslados', () => {
         cy.get('button.btn.btn-primary.btn-sm.iconoRueda').click().wait(1000);
         cy.get(':nth-child(5) > .dropdown-item').click().wait(1000);
         cy.get('.modal-footer > button.btn').click().wait(1000);
-
-
     });
   });
