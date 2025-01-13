@@ -1,7 +1,7 @@
 import { login } from "../../../support/utilsPROD";
 const contraseña = '1234La';
 const usuario = 'coplussspv';
-const idtraslado = 1179300;
+const idtraslado = 1292518;
 
 describe('AccionesTraslados', () => {
 
@@ -42,7 +42,7 @@ describe('AccionesTraslados', () => {
 
 
     it ('VerDetalles', () => {
-      //cy.viewport(1920, 1080);
+      cy.viewport(1920, 1080);
       login(usuario,contraseña);
       cy.wait(1500);
       cy.get(':nth-child(2) > .header').click();
@@ -53,11 +53,11 @@ describe('AccionesTraslados', () => {
       cy.contains(':nth-child(1) > :nth-child(1) > .content > .card > .card2', (`${idtraslado}`)).should('be.visible');
       cy.contains(':nth-child(1) > :nth-child(1) > .content > .card > .card2', (`${idtraslado}`)).should('be.visible');
       cy.contains('.modal-header', (`${idtraslado}`)).should('be.visible');
-      cy.contains('.text-truncate', 'esto se modifica por Automatio').should('be.visible');
+      cy.contains('.text-truncate', 'esto se modifica por Automatio').should('be.visible').wait(3000);
     });
 
     it ('AgregarNotaPublicaYPrivada', () => {
-      //cy.viewport(1920, 1080);
+      cy.viewport(1920, 1080);
       login(usuario,contraseña);
       cy.wait(1500);
       cy.get(':nth-child(2) > .header').click();
@@ -82,7 +82,7 @@ describe('AccionesTraslados', () => {
      });
 
      it ('AgregarReclamo', () => {
-      //cy.viewport(1920, 1080);
+      cy.viewport(1920, 1080);
       login(usuario,contraseña);
       cy.wait(1500);
       cy.get(':nth-child(2) > .header').click();
@@ -102,7 +102,7 @@ describe('AccionesTraslados', () => {
       });
 
       it ('AgregarReducirHsEspera', () => {
-        //cy.viewport(1920, 1080);
+        cy.viewport(1920, 1080);
         login(usuario,contraseña);
         cy.wait(1500);
         cy.get(':nth-child(2) > .header').click();
@@ -122,6 +122,7 @@ describe('AccionesTraslados', () => {
 
   describe('Alta y anulación', () => {
     it ('Alta', () =>  {
+      cy.viewport(1920, 1080);
       login(usuario,contraseña);
       cy.wait(1500);
       cy.get(':nth-child(2) > .header').click();
@@ -138,6 +139,7 @@ describe('AccionesTraslados', () => {
     }); 
   
     it ('Anular', () => {
+      cy.viewport(1920, 1080);
       login(usuario,contraseña);
       cy.wait(1500);
       cy.get(':nth-child(2) > .header').click();

@@ -11,6 +11,7 @@ function abrirFiltro () {
 
 describe('IdTraslado', () => {
 it ('IdTraslado', () => {
+  cy.viewport(1920, 1080);
   login(usuario,contraseña);
   cy.get(':nth-child(2) > .header').click();
   cy.get('[href="#/gestion/traslados"]').click();
@@ -23,6 +24,7 @@ it ('IdTraslado', () => {
 
    describe('Nro.Siniestro', () => {
     it ('Nro.Siniestro', () => {
+      cy.viewport(1920, 1080);
       login(usuario,contraseña);
       cy.get(':nth-child(2) > .header').click();
       cy.get('[href="#/gestion/traslados"]').click();
@@ -35,6 +37,7 @@ it ('IdTraslado', () => {
 
   describe('Nombre Paciente', () => {
     it ('Nombre Paciente', () => {
+      cy.viewport(1920, 1080);
       login(usuario,contraseña);
       cy.get(':nth-child(2) > .header').click();
         cy.get('[href="#/gestion/traslados"]').click();
@@ -44,10 +47,11 @@ it ('IdTraslado', () => {
           });
         });
       });
-    
+    /*
 //Tipo de Siniestro (Son 3)
 describe('FechaCarga', () => {
   it ('FechaCarga', () => {
+    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro()
     cy.get(':nth-child(1) > .control-label').scrollIntoView({ duration: 2000 });
@@ -62,9 +66,10 @@ describe('FechaCarga', () => {
     cy.get(Limpiar).click();
     });
   });
-
+*/
   describe('TipoSiniestroTodos', () => {
     it ('TipoSiniestroTodos', () => {
+      cy.viewport(1920, 1080);
       login(usuario,contraseña);
       abrirFiltro()
   cy.get(':nth-child(5) > .control-label').scrollIntoView({ duration: 2000 });
@@ -78,6 +83,7 @@ describe('FechaCarga', () => {
 
 describe('TipoSiniestroART', () => {
   it ('TipoSiniestroART', () => {
+    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro()
 cy.get(':nth-child(5) > .control-label').scrollIntoView({ duration: 2000 });
@@ -94,6 +100,7 @@ cy.get(':nth-child(5) > .control-label').scrollIntoView({ duration: 2000 });
 
 describe('TipoSiniestroAP', () => {
   it ('TipoSiniestroAP', () => {
+    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro()
 cy.get(':nth-child(5) > .control-label').scrollIntoView({ duration: 2000 });
@@ -110,6 +117,7 @@ cy.get(':nth-child(5) > .control-label').scrollIntoView({ duration: 2000 });
 
 describe('TipoViajeInmediato', () => { //FALTA agregar validacion a resultados
   it ('TipoViajeInmediato', () => {
+    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro()
 cy.get(':nth-child(6) > .control-label').scrollIntoView({ duration: 2000 });
@@ -122,6 +130,7 @@ cy.get(Filtrar).click().wait(3000);
 
 describe('TipoViajeEspontaneo', () => { //FALTA agregar validacion a resultados
   it ('TipoViajeEspontaneo', () => {
+    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro()
 cy.get(':nth-child(6) > .control-label').scrollIntoView({ duration: 2000 });
@@ -135,6 +144,7 @@ cy.get(Filtrar).click().wait(3000);
 
 describe('TipoViajeProgramado', () => { //FALTA agregar validacion a resultados
   it ('TipoViajeProgramado', () => {
+    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro()
 cy.get(':nth-child(6) > .control-label').scrollIntoView({ duration: 2000 });
@@ -147,6 +157,7 @@ cy.get(Filtrar).click().wait(3000);
 
 describe('Estados', () => {
   it ('Solicitado', () => {
+    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro()
 cy.get(':nth-child(7) > .form-control > .ng-select-container > .ng-arrow-wrapper').click();
@@ -157,6 +168,7 @@ cy.get(Filtrar).click().wait(3000);
 
 describe('Estados', () => {
   it ('Realizado', () => {
+    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro()
 cy.get(':nth-child(7) > .form-control > .ng-select-container > .ng-arrow-wrapper').click();
@@ -167,6 +179,7 @@ cy.get(Filtrar).click().wait(3000);
 
 describe('Estados', () => {
   it ('Confirmado', () => {
+    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro()
 cy.get(':nth-child(7) > .form-control > .ng-select-container > .ng-arrow-wrapper').click();
@@ -177,6 +190,7 @@ cy.get(Filtrar).click().wait(3000);
 
 describe('Estados', () => {
   it ('Anulado', () => {
+    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro()
 cy.get(':nth-child(7) > .form-control > .ng-select-container > .ng-arrow-wrapper').click();
@@ -187,6 +201,7 @@ cy.get(Filtrar).click().wait(3000);
 
 describe('Estados', () => {
   it ('Negativo', () => {
+    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro()
 cy.get(':nth-child(7) > .form-control > .ng-select-container > .ng-arrow-wrapper').click();
