@@ -12,7 +12,6 @@ function abrirFiltro () {
 
 describe('Siniestros', () => {
   it ('NroSiniestro', () => {
-    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro();
     cy.get('.col-10 > .row > :nth-child(2) > .form-control').type('374679').wait(2000);
@@ -23,7 +22,6 @@ describe('Siniestros', () => {
 
 describe('Siniestros', () => {
   it ('Paciente', () => {
-    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro();
     cy.get('.pr-4 > .form-control').type('LEDEZMA').wait(2000);
@@ -33,7 +31,6 @@ describe('Siniestros', () => {
 
 describe('Siniestros', () => {
   it ('Empleador', () => {
-    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro();
     cy.get(':nth-child(2) > :nth-child(3) > .form-control').type('tristan');
@@ -45,7 +42,6 @@ describe('Siniestros', () => {
 
 describe('Siniestros', () => {
   it ('PrestadorMedico', () => {
-    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro();
 cy.get('input[placeholder="Busque al prestador"]').click().type('federa');
@@ -57,7 +53,6 @@ cy.get('#btnFiltrar').click().wait(2000);
 
 describe('Siniestros', () => {
   it ('AdministradorSiniestro', () => {
-    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro();
     cy.get(':nth-child(2) > :nth-child(1) > .form-control > .ng-select-container').click();
@@ -70,7 +65,6 @@ describe('Siniestros', () => {
 
 describe('Siniestros', () => {
   it ('MedicoAuditor', () => {
-    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro();
     cy.get(':nth-child(2) > :nth-child(2) > .form-control > .ng-select-container > .ng-arrow-wrapper').click();
@@ -82,7 +76,6 @@ describe('Siniestros', () => {
 
 describe('Siniestros', () => {
   it ('EstadosAuditoria', () => {
-    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro();
     cy.get(':nth-child(3) > :nth-child(1) > .form-control > .ng-select-container > .ng-value-container > .ng-input > input').click();
@@ -96,7 +89,6 @@ describe('Siniestros', () => {
 
 describe('Siniestros', () => {
   it ('TipoSiniestro', () => {
-    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro();
     cy.get(':nth-child(3) > :nth-child(2) > .form-control > .ng-select-container > .ng-value-container').click();
@@ -113,7 +105,6 @@ describe('Siniestros', () => {
 
 describe('Siniestros', () => {
   it ('Checks', () => {
-    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     abrirFiltro();
     cy.get(':nth-child(3) > custom-switch.ng-valid > .custom-control > .custom-control-label').click();

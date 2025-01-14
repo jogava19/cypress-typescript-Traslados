@@ -8,7 +8,6 @@ const usuarioprest2 = 'brownsspv';
 
 describe('AltaYAnulacion', () => {
   it ('AltaInmediatoYAnulaInmediato', () => {
-    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     cy.wait(1500);
     cy.get(':nth-child(2) > .header').click();
@@ -28,7 +27,6 @@ describe('AltaYAnulacion', () => {
 
 describe('InmediatoSinRes', () => {
   it ('InmediatoSinResolución', () => {
-    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     cy.wait(1500);
     cy.get(':nth-child(2) > .header').click();
@@ -43,7 +41,6 @@ describe('InmediatoSinRes', () => {
 
 describe('InmediatoConParticipante', () => {
   it ('Inmediato', () => {
-    cy.viewport(1920, 1080);
     login(usuario,contraseña);
     cy.wait(1500);
     cy.get(':nth-child(2) > .header').click();
@@ -56,7 +53,6 @@ describe('InmediatoConParticipante', () => {
   }); 
 
   it ('ParticipanteAcepta', () => {
-    cy.viewport(1920, 1080);
     login(usuarioprest,contraseñaprest);
     cy.wait(1500);
     cy.get('#button-basic').click();
@@ -68,7 +64,6 @@ describe('InmediatoConParticipante', () => {
   }); 
 
   it ('ParticipanteRechaza', () => {
-    cy.viewport(1920, 1080);
     login(usuarioprest2,contraseñaprest2);
     cy.wait(1500);
     cy.get('#button-basic').click();

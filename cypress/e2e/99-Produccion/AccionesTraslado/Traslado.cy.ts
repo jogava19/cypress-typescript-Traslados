@@ -6,7 +6,6 @@ const idtraslado = 1292518;
 describe('AccionesTraslados', () => {
 
     it ('CamposYDesvios', () => {
-      cy.viewport(1920, 1080);
       login(usuario,contraseña);
       cy.wait(1500);
       cy.get(':nth-child(2) > .header').click();
@@ -42,7 +41,6 @@ describe('AccionesTraslados', () => {
 
 
     it ('VerDetalles', () => {
-      cy.viewport(1920, 1080);
       login(usuario,contraseña);
       cy.wait(1500);
       cy.get(':nth-child(2) > .header').click();
@@ -57,7 +55,6 @@ describe('AccionesTraslados', () => {
     });
 
     it ('AgregarNotaPublicaYPrivada', () => {
-      cy.viewport(1920, 1080);
       login(usuario,contraseña);
       cy.wait(1500);
       cy.get(':nth-child(2) > .header').click();
@@ -82,7 +79,6 @@ describe('AccionesTraslados', () => {
      });
 
      it ('AgregarReclamo', () => {
-      cy.viewport(1920, 1080);
       login(usuario,contraseña);
       cy.wait(1500);
       cy.get(':nth-child(2) > .header').click();
@@ -102,7 +98,6 @@ describe('AccionesTraslados', () => {
       });
 
       it ('AgregarReducirHsEspera', () => {
-        cy.viewport(1920, 1080);
         login(usuario,contraseña);
         cy.wait(1500);
         cy.get(':nth-child(2) > .header').click();
@@ -122,7 +117,6 @@ describe('AccionesTraslados', () => {
 
   describe('Alta y anulación', () => {
     it ('Alta', () =>  {
-      cy.viewport(1920, 1080);
       login(usuario,contraseña);
       cy.wait(1500);
       cy.get(':nth-child(2) > .header').click();
@@ -139,7 +133,6 @@ describe('AccionesTraslados', () => {
     }); 
   
     it ('Anular', () => {
-      cy.viewport(1920, 1080);
       login(usuario,contraseña);
       cy.wait(1500);
       cy.get(':nth-child(2) > .header').click();

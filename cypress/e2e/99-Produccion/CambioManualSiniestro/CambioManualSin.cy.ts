@@ -9,7 +9,6 @@ const MedicoAuditor = 'medaudisspv';
 describe('CambioManualPrestador', () => {
 
     it ('CoordinadorPlus', () => {
-      cy.viewport(1920, 1080);
       login(coordinadorPlus,contraseña);
       cy.wait(1500);
       cy.get(':nth-child(2) > .header').click();
@@ -22,7 +21,6 @@ describe('CambioManualPrestador', () => {
       }); 
 
       it ('AdministradorSiniestros', () => {
-        cy.viewport(1920, 1080);
         login(AdministradorSiniestros, contraseña);
         cy.wait(1500);
         cy.get(':nth-child(2) > .header').click();
@@ -35,7 +33,6 @@ describe('CambioManualPrestador', () => {
         }); 
 
         it ('Coordinador', () => {
-         cy.viewport(1920, 1080);
          login(coordinador, contraseñaLa);
           cy.wait(1500);
           cy.get(':nth-child(2) > .header').click();
@@ -47,7 +44,6 @@ describe('CambioManualPrestador', () => {
         });
         
         it ('MedicoAuditor', () => {
-          cy.viewport(1920, 1080);
           login(MedicoAuditor, contraseñaLa);
            cy.wait(1500);
            cy.get(':nth-child(2) > .header').click();

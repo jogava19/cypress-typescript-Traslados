@@ -6,7 +6,6 @@ const idtraslado = '197928';
 
 describe('Siniestros', () => {
   it ('AltaTraslados', () => {
-    //cy.viewport(1920, 1080);
     login(usuario,contraseña);
     cy.get(':nth-child(2) > .header').click();
     cy.get('[ng-reflect-router-link="gestion,siniestros"]').click();

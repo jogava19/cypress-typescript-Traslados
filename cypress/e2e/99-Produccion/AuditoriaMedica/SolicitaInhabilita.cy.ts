@@ -9,7 +9,6 @@ const MedicoAuditor = 'medaudisspv';
 describe('SolicitaAuditoriaMedicaYConfirma', () => {
 
     it ('CoordinadorSolicita', () => {
-      cy.viewport(1920, 1080);
       login(coordinador,contraseñaLa);
       cy.wait(1500);
       cy.get(':nth-child(2) > .header').click();
@@ -23,7 +22,6 @@ describe('SolicitaAuditoriaMedicaYConfirma', () => {
       }); 
 
       it ('MedicoAuditorInhabilita', () => {
-        cy.viewport(1920, 1080);
         login(MedicoAuditor,contraseñaLa);
         cy.wait(1500);
         cy.get(':nth-child(2) > .header').click();
